@@ -41,24 +41,25 @@ uint64_t RTMath::currentUSecsSinceEpoch()
     gettimeofday(&tv, NULL);
     return (uint64_t)tv.tv_sec * 1000000 + (uint64_t)tv.tv_usec;
 #endif
+return micros();
 }
 
 const char *RTMath::displayRadians(const char *label, RTVector3& vec)
 {
-    sprintf(m_string, "%s: x:%f, y:%f, z:%f\n", label, vec.x(), vec.y(), vec.z());
+    sprintf(m_string, "%s\tx:% 9.4f\t, y:% 9.4f\t, z:% 9.4f\t\n", label, vec.x(), vec.y(), vec.z());
     return m_string;
 }
 
 const char *RTMath::displayDegrees(const char *label, RTVector3& vec)
 {
-    sprintf(m_string, "%s: roll:%f, pitch:%f, yaw:%f", label, vec.x() * RTMATH_RAD_TO_DEGREE,
+    sprintf(m_string, "%s\tr:% 9.4f\t, p:% 9.4f\t, y:% 9.4f", label, vec.x() * RTMATH_RAD_TO_DEGREE,
             vec.y() * RTMATH_RAD_TO_DEGREE, vec.z() * RTMATH_RAD_TO_DEGREE);
     return m_string;
 }
 
 const char *RTMath::display(const char *label, RTQuaternion& quat)
 {
-    sprintf(m_string, "%s: scalar: %f, x:%f, y:%f, z:%f\n", label, quat.scalar(), quat.x(), quat.y(), quat.z());
+    sprintf(m_string, "%s:\t scalar: % 9.4f\t, x:% 9.4f\t, y:% 9.4f\t, z:% 9.4f\t\n", label, quat.scalar(), quat.x(), quat.y(), quat.z());
     return m_string;
 }
 
