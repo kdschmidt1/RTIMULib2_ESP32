@@ -25,11 +25,15 @@
 #ifndef _RTIMULIB_H
 #define	_RTIMULIB_H
 
+#include "FS.h"
+#include <SPIFFS.h>
+
 #include "RTIMULibDefs.h"
 
 #include "RTMath.h"
 
 #include "RTFusion.h"
+#include "RTFusionRTQF.h"
 #include "RTFusionKalman4.h"
 
 #include "RTIMUHal.h"
@@ -44,7 +48,6 @@
 #include "IMUDrivers/RTPressureBMP180.h"
 #include "IMUDrivers/RTPressureLPS25H.h"
 #include "IMUDrivers/RTPressureMS5611.h"
-
 #include "IMUDrivers/RTHumidity.h"
 #include "IMUDrivers/RTHumidityHTS221.h"
 
