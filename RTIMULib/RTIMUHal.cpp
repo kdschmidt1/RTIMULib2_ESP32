@@ -25,7 +25,7 @@
 //  staslock@gmail.com (www.clickdrive.io)
 
 #include "RTIMUHal.h"
-#include "I2Cdev.h"
+#include "I2CDev/I2Cdev.h"
 #include <SPI.h>
 
 RTIMUHal::RTIMUHal()
